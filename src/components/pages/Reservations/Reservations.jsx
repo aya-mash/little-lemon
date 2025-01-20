@@ -1,8 +1,8 @@
-import "./Reservations.css";
 import { useReducer } from "react";
 import { useNavigate } from "react-router-dom";
 import { fetchAPI, submitAPI } from "../../../utils/mockAPI";
 import ReservationForm from "./reservationForm";
+import "./Reservations.css";
 
 const updateTimes = (availableTimes, date) => {
   const response = fetchAPI(new Date(date));

@@ -3,19 +3,15 @@
 }
 
 .reservations h2 {
-  width: 100%;
   padding: 1.5rem 2rem;
   color: #495e57;
-  height: max-content;
 }
 
 .reservations form {
   padding: 0 2rem 2rem;
   display: grid;
-  align-items: center;
   grid-template-columns: repeat(2, minmax(12.5rem, 1fr));
   gap: 1.5rem;
-  width: 100%;
 }
 
 .reservations form button {
@@ -41,16 +37,14 @@
 
 .select-wrapper::after {
   content: url("/src/components/pages/Home/assets/arrowDown.svg");
-  font-weight: 600;
-  height: 1.5rem;
-  width: 1.5rem;
+  position: absolute;
   top: 0.5rem;
   right: 0.625rem;
-  position: absolute;
+  height: 1.5rem;
+  width: 1.5rem;
 }
 
-.reservations button:disabled,
-.reservations button[disabled] {
+.reservations button:disabled {
   background-color: #edefee;
   border-color: #edefee;
   color: #adafae;
@@ -70,16 +64,8 @@
   padding-top: 1.5rem;
 }
 
-.confirmed-reservation p {
-  padding-top: 0.25rem;
-}
-
 @media (max-width: 491px) {
   .reservations form {
-    grid-template-columns: repeat(1, 1fr);
-  }
-
-  .reservations form button {
-    grid-column: 1 / span 1;
+    grid-template-columns: 1fr;
   }
 }
